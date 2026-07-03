@@ -1,77 +1,71 @@
-<div>
-  <a href="https://github.com/FiercestT/EasyEdaThemes/releases/latest">
-    <img src="https://img.shields.io/github/v/release/FiercestT/EasyEdaThemes?style=for-the-badge" />
-  </a>
-  <a href="https://github.com/FiercestT/EasyEdaThemes/releases/">
-    <img src="https://img.shields.io/github/downloads/FiercestT/EasyEdaThemes/total?style=for-the-badge" />
-  </a>
+<div align="center">
+
+# EasyEDA Themes
+
+**Dark and light themes for the EasyEDA circuit editor**
+
 </div>
 
-# EasyEda Themes Extension
+An EasyEDA extension that overhauls the entire UI with multiple dark and light themes. Works in the browser and the standalone app. Themes are defined in JSON and applied via runtime CSS injection.
 
-## 📖 Overview
+## ■ Features
 
-This extension revamps the entire EasyEda UI with several unique **Dark** 🕶️ and some **Light** themes.
+- ❖ **Multiple dark themes** — One Dark, Darker, Monokai Pro, Dracula, Oceanic, and more
+- ❖ **Light themes** — Light Owl and additional light variants
+- ❖ **In-app theme picker** — switch themes from the `Themer > Select Theme` toolbar menu
+- ❖ **Live CSS editor** — edit and force-reload CSS without remounting the extension
+- ❖ **JSON-driven** — add new themes by editing `themes.json`
 
-It is all contained in an extension that can run on the EasyEda website or standalone app, in any browser (tested chrome and firefox).
+## ■ Stack
 
-## 💾 Installing 
+<div align="center">
 
-1) Download the latest [release](https://github.com/FiercestT/EasyEdaThemes/releases/).
-2) Now in EasyEda, open the extensions window by going to: `Advanced > Extensions > Extensions Settings`.
-3) Select `Load Extension > Select Files`.
-4) Select **all** of the files from the `extension` folder from the downloaded repository.
-5) **Make sure** that the `Extension ID` field says `themer`. Then load the extension.
-6) Thats it! The themes extension is now mounted.
-7) You can now go to `Theme Settings > Select Theme` to select a theme.
+| Component | Technology |
+|-----------|------------|
+| Extension | JavaScript, EasyEDA Extension API |
+| Styling | CSS (uploaded as .txt) |
+| Themes | JSON color definitions |
 
-Note: If you remount the extension, it is reccomended that you reload the page (`Right Click > Reload` on standalone app).
+</div>
 
-## 📷 Screenshots
+## ■ How It Works
 
-Some notable themes.
+```
+1. Extension loads color definitions from themes.json
+2. User opens the Themer > Select Theme toolbar menu and picks a theme
+3. The extension injects CSS at runtime to restyle the entire EasyEDA UI
+4. The Live CSS editor allows editing and force-reloading CSS without remounting the extension
+```
 
-One Dark
-![](./img/OneDark.png)
+## ■ Screenshots
 
-Darker
-![](./img/Darker.png)
+<div align="center">
 
-Monokai Pro
-![](./img/Monokai_Pro.png)
+![One Dark](img/OneDark.png)
 
-Dracula
-![](./img/Dracula.png)
+*One Dark theme applied to EasyEDA*
 
-Oceanic
-![](./img/Oceanic.png)
+![Dracula](img/Dracula.png)
 
-Light Owl
-![](./img/Light_Owl.png)
+*Dracula theme applied to EasyEDA*
 
-## 🔨 Contributing
+![Monokai Pro](img/Monokai_Pro.png)
 
-Whether you want to add to the project, edit it for yourself, or fix some CSS that I missed, the following can help you out a bit when it comes to the project and EasyEda extensions.
+*Monokai Pro theme applied to EasyEDA*
 
-### File Structure
+</div>
 
-| File               | Description                                                                     |
-|--------------------|---------------------------------------------------------------------------------|
-| easyeda-helper.js  | Some helper methods for the EasyEda api                                         |
-| main.js            | The main code for the extension.                                                |
-| manifest.json      | Must be present to identify the extension.                                      |
-| style.txt          | The CSS styling. It is a .txt as .css is not allowed to be uploaded in EasyEda. |
-| themes.json        | Themes and their colors.                                                        |
-| /extra/style.css   | Use this to develop the CSS, when uploading, copy this over to style.txt        |
+## ■ Usage
 
-### CSS Considerations
+```bash
+# 1. Download the latest release:
+#    https://github.com/pluttan/EasyEdaThemes/releases/
+# 2. In EasyEDA: Advanced > Extensions > Extensions Settings
+# 3. Load Extension > Select Files — select all files from the extension/ folder
+# 4. Make sure the Extension ID field says "themes", then load
+# 5. Use the Themer > Select Theme toolbar button to pick a theme
+```
 
-- Extensions can only mount certain filetypes (js, jpg, png, gif, svg, txt, json, md). 
-- Because of the above, the stylesheet mounted is uploaded as a .txt file. The actual stylesheet for development purposes can be found in `extra/style.css`. It can then be copied over to the txt for upload.
-- To make CSS editing much easier, there is a tool in `Theme Settings > Edit CSS`, which allows you to update the CSS without remounting the extension. You can also force reload the CSS in this dialog.
+## ■ License
 
-### Other Considerations
-
-- All theme info is stored in `themes.json`, you can simply add a new theme by adding to the json using the existing structure.
-- EasyEda can load resources that were uploaded, in this case: `themes.json` and `style.txt`; Using an api call. These are loaded as blobs and must be processed.
-- EasyEda has some basic documentation and outdated examples for their api. You can use developer tools and prettify the main.min.js, and explore it to see what api calls are possible and what arguments should be used.
+MIT © [pluttan](https://github.com/pluttan)

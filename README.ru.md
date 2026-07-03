@@ -1,14 +1,8 @@
-![Header](header.png)
-
 <div align="center">
 
 # EasyEDA Themes
 
 **Тёмные и светлые темы для редактора схем EasyEDA**
-
-[![License](https://img.shields.io/badge/license-MIT-2C2C2C?style=for-the-badge&labelColor=1E1E1E)](LICENSE)
-[![JavaScript](https://img.shields.io/badge/javascript-extension-2C2C2C?style=for-the-badge&logo=javascript&labelColor=1E1E1E)]()
-[![EasyEDA](https://img.shields.io/badge/easyeda-plugin-2C2C2C?style=for-the-badge&labelColor=1E1E1E)]()
 
 </div>
 
@@ -34,6 +28,15 @@
 
 </div>
 
+## ■ Как это работает
+
+```
+1. Расширение загружает определения цветов из themes.json
+2. Пользователь открывает меню Themer > Select Theme на панели инструментов и выбирает тему
+3. Расширение инъектирует CSS во время выполнения, переоформляя весь интерфейс EasyEDA
+4. Живой редактор CSS позволяет редактировать и принудительно перезагружать CSS без перемонтирования расширения
+```
+
 ## ■ Скриншоты
 
 <div align="center">
@@ -52,13 +55,16 @@
 
 </div>
 
-## ■ Запуск
+## ■ Использование
 
-1. Скачайте последний [релиз](https://github.com/pluttan/EasyEdaThemes/releases/)
-2. В EasyEDA: `Advanced > Extensions > Extensions Settings`
-3. `Load Extension > Select Files` — выберите все файлы из папки `extension/`
-4. Убедитесь, что в поле `Extension ID` указано `themes`, затем загрузите
-5. Используйте кнопку `Themer > Select Theme` на панели инструментов для выбора темы
+```bash
+# 1. Скачайте последний релиз:
+#    https://github.com/pluttan/EasyEdaThemes/releases/
+# 2. В EasyEDA: Advanced > Extensions > Extensions Settings
+# 3. Load Extension > Select Files — выберите все файлы из папки extension/
+# 4. Убедитесь, что в поле Extension ID указано "themes", затем загрузите
+# 5. Используйте кнопку Themer > Select Theme на панели инструментов для выбора темы
+```
 
 ## ■ Лицензия
 
